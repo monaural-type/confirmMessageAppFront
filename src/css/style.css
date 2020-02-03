@@ -1,0 +1,392 @@
+/* CSS files add styling rules to your content */
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    background-color: #00acee;
+}
+
+.vertificationDocuments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    width: 60%;
+    height: 600px;
+    margin: auto;
+    padding: 50px 70px 50px 70px;
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
+    /* IE6-9 */
+}
+
+.foldtl {
+    position: relative;
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.foldtl:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0px;
+    height: 0px;
+    border-bottom: 70px solid #eee;
+    border-left: 70px solid transparent;
+    -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+}
+
+.foldtl:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0px;
+    height: 0px;
+    border-top: 69px solid #00acee;
+    border-right: 69px solid transparent;
+}
+
+.verification {
+    text-align: center;
+    font-size: 40px;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+}
+
+.nameTitle {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.name {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.messageTitle {
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+.messages {
+    margin: 0 40px;
+    font-size: 25px;
+}
+
+.vertificationNumber {
+    margin: 0 190px;
+}
+
+.vertificationNum {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+textarea {
+    margin: 0 30px;
+    resize: none;
+    width: 90%;
+    height: 400px;
+}
+
+.TwitterButton {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin: 10px;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #000000;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.vertificationTitle {
+    font-size: 30px;
+}
+
+.vertificationBox {
+    width: 70px;
+    height: 70px;
+    margin: 20px 10px;
+    border: 1px solid black;
+}
+
+.vertificationWrapper {
+    width: 60%;
+}
+
+.vertificatingWrapper {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+
+}
+
+.BoxOfVertification {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin-left: auto;
+}
+
+
+.vertificationBody {
+    width: 100%;
+    height: 100%;
+}
+
+.approvalIcon {
+    max-width: 100%;
+}
+
+#vertificatingConect {
+    position: fixed;
+    text-align: center;
+    margin: 30px;
+    /* 要素の位置を固定する */
+    top: 0px;
+    /* 基準の位置を画面の一番下に指定する */
+    right: 0;
+    /* 基準の位置を画面の一番右に指定する */
+    width: 100px;
+    height: 50px;
+    /* 幅を指定する */
+    background-color: chocolate;
+    /* ボーダーを指定する */
+}
+
+.BoxOfVertificationWrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+    body {
+        font-family: helvetica, arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        background-color: #00acee;
+    }
+
+    .vertificationDocuments {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: #ffffff;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* IE10+ */
+        background: linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
+        /* IE6-9 */
+    }
+
+    .foldtl {
+        position: relative;
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .foldtl:before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 0px;
+        height: 0px;
+        border-bottom: 70px solid #eee;
+        border-left: 70px solid transparent;
+        -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    }
+
+    .foldtl:after {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 0px;
+        height: 0px;
+        border-top: 69px solid #00acee;
+        border-right: 69px solid transparent;
+    }
+
+    .verification {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nameTitle {
+        margin: 10px;
+        font-size: 30px;
+    }
+
+    .name {
+        text-align: center;
+        font-size: 40px;
+    }
+
+
+    .messageTitle {
+        margin: 30px 0;
+        font-size: 30px;
+    }
+
+    .messages {
+        margin: 0 40px;
+        font-size: 25px;
+    }
+
+    .vertificationNumber {
+        margin: 0 190px;
+    }
+
+    .vertificationNum {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .vertificationWrapper {
+
+        width: 100%;
+    }
+
+    textarea {
+        margin: 0 30px;
+        resize: none;
+        width: 90%;
+        height: 400px;
+    }
+
+    .TwitterButton {
+        width: 200px;
+        height: 50px;
+        display: inline-block;
+        margin: 10px;
+        padding: 0.3em 1em;
+        text-decoration: none;
+        color: #000000;
+        border: solid 2px #67c5ff;
+        border-radius: 3px;
+        transition: .4s;
+    }
+
+    .vertificationTitle {
+        font-size: 30px;
+    }
+
+    .vertificationBox {
+        width: 30px;
+        height: 30px;
+        margin: 20px 10px;
+        border: 1px solid black;
+    }
+
+    .vertificatingWrapper {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+
+    }
+
+    .BoxOfVertification {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 20px;
+    }
+
+
+    .vertificationBody {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .approvalIcon {
+        max-width: 100%;
+    }
+
+    #vertificatingConect {
+        position: fixed;
+        text-align: center;
+        margin: 10px;
+        /* 要素の位置を固定する */
+        top: 0px;
+        /* 基準の位置を画面の一番下に指定する */
+        right: 0;
+        /* 基準の位置を画面の一番右に指定する */
+        width: 100px;
+        height: 50px;
+        /* 幅を指定する */
+        background-color: chocolate;
+        /* ボーダーを指定する */
+    }
+
+    .BoxOfVertificationWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+    }
+}
