@@ -24,8 +24,8 @@ const AccessOauth = () => {
   return (
     <>
       <div className="vertificationDocuments foldtl">
-        <h1 className="verification">Twitter確かめったー</h1>
         <div className="Container">
+          <h1 className="verification">Twitter確かめったー</h1>
           <p>
             このアプリケーションはTwitterの発言をしてもいいか、友達に確かめてもらうアプリです。
           </p>
@@ -39,10 +39,10 @@ const AccessOauth = () => {
               設定した人数分の人に確認してもらい次第、Twitterに自動的にメッセージが送られる
             </li>
           </ol>
+          <button className="TwitterButton" onClick={handleClick}>
+            <span className="buttonText">Twitter認証</span>
+          </button>
         </div>
-        <button className="TwitterButton" onClick={handleClick}>
-          <span className="buttonText">Twitter認証</span>
-        </button>
       </div>
     </>
   );

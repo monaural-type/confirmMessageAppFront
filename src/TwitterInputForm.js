@@ -16,33 +16,24 @@ const TwitterInputForm = props => {
   const [message, setMessage] = useState('');
   const [count, setCount] = useState('');
   const [error, setError] = useState('');
-  const [greetingStatus, displayGreeting] = useState(false);
   const [id, setId] = useState('');
-  const contentProps = useSpring({
-    opacity: greetingStatus ? 1 : 0,
-    marginLeft: greetingStatus ? 0 : 1000
-  });
-  useEffect(async () => {
-    const userId = getParam('Id');
-    setId(String(userId));
-    console.log(userId);
-    const params = {
-      id: userId
-    };
-    console.log(params);
-    let res;
-    try {
-      res = await axios.get(url + '/get_name', { params });
-    } catch (error) {
-      console.log(error);
-    }
-    setName(res.data.name);
-  }, [setId]);
+  // useEffect(async () => {
+  //   const userId = getParam('Id');
+  //   setId(String(userId));
+  //   console.log(userId);
+  //   const params = {
+  //     id: userId
+  //   };
+  //   console.log(params);
+  //   let res;
+  //   try {
+  //     res = await axios.get(url + '/get_name', { params });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  //   setName(res.data.name);
+  // }, [setId]);
 
-  const contentProp = useSpring({
-    opacity: greetingStatus ? 0 : 1,
-    marginRight: greetingStatus ? 2000 : 0
-  });
   const handleChange = event => {
     switch (event.target.name) {
       case 'message':
@@ -100,37 +91,12 @@ const TwitterInputForm = props => {
             type="number"
             name="count"
           />
-          <button class="TwitterButton" onClick={handleSubmit}>
+          <span>{error}</span>
+          <button className="TwitterButton" onClick={handleSubmit}>
             <span className="buttonText">決定</span>
           </button>
         </div>
       </div>
-      {/* <div className="vertificationDocuments foldtl">
-        <h1 className="verification">承認証</h1>
-        <div className="Container">
-          <p className="nameTitle">名前</p>
-          <div className="name">{name}</div>
-          <p className="messageTitle">メッセージ</p>
-          <textarea
-            name="message"
-            value={message}
-            onChange={handleChange}
-          ></textarea>
-          <div className="vertificationNum">
-            <p className="messageTitle">何人に確認して欲しいか？</p>
-            <input
-              className="vertificationNumber"
-              value={count}
-              onChange={handleChange}
-              type="number"
-              name="count"
-            />
-          </div>
-        </div>
-        <button class="TwitterButton" onClick={handleSubmit}>
-          決定
-        </button>
-      </div> */}
     </>
   );
 };

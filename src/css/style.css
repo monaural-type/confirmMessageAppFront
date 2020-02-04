@@ -155,13 +155,15 @@ textarea {
 }
 
 .TwitterButton {
+    height: 60%;
+    width: 60px;
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright;
     text-orientation: upright;
     right: 10px;
     display: inline-block;
-    margin: 0 0 0 auto;
-    padding: 0.3em 1.5em;
+    margin: auto;
+    /* padding: 1.5em; */
     text-decoration: none;
     color: #000000;
     border: solid 2px #67c5ff;
@@ -173,6 +175,8 @@ textarea {
     writing-mode: vertical-rl;
     -webkit-text-orientation: upright;
     text-orientation: upright;
+    font-size: 30px;
+    height: 100%;
 }
 
 .vertificationTitle {
@@ -315,7 +319,7 @@ textarea {
         -webkit-text-orientation: none;
         text-orientation: none;
         text-align: center;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .Container {
@@ -326,6 +330,7 @@ textarea {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        margin-top: 60px;
     }
 
     .nameTitle {
