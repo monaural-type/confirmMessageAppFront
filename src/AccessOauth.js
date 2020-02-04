@@ -8,7 +8,7 @@ import {
   useCallback
 } from 'react';
 import axios from 'axios';
-const url = 'http://0.0.0.0:5000';
+const url = 'https://stormy-bayou-25730.herokuapp.com';
 const AccessOauth = () => {
   const [userData, setUserData] = useState('');
   const [data, setData] = useState('');

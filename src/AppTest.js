@@ -5,7 +5,7 @@ import AccessOauth from './AccessOauth.js';
 import TwitterInputForm from './TwitterInputForm.js';
 import Verificated from './Verificated.js';
 import Verificating from './Verificating.js';
-const url = 'http://0.0.0.0:5000';
+const url = 'https://stormy-bayou-25730.herokuapp.com';
 
 //url無いの特定の要素を持ってくるためのコード(コピペ)
 const getParam = (name, url) => {

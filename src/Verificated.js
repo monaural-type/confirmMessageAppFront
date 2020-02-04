@@ -9,7 +9,7 @@ import {
 } from 'react';
 import axios from 'axios';
 import approvalIcon from './image/approval-icon.png';
-const url = 'http://0.0.0.0:5000';
+const url = 'https://stormy-bayou-25730.herokuapp.com';
 const Verificated = props => {
   const getParam = props.getParam;
   const [message, setMessage] = useState('');

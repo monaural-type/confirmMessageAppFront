@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { useSpring, useTransition, animated as a } from 'react-spring';
 import axios from 'axios';
-const url = 'http://0.0.0.0:5000';
+const url = 'https://stormy-bayou-25730.herokuapp.com';
 const TwitterInputForm = props => {
   const { getParam } = props;
   const [name, setName] = useState('');
