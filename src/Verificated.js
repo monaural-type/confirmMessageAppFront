@@ -20,7 +20,7 @@ const Verificated = props => {
   const [verificationText, setVerificationText] = useState(
     '承認ページのURLをコピーする'
   );
-  const url = 'http://localhost:5000';
+  const url = 'https://stormy-bayou-25730.herokuapp.com';
   let Id = getParam('Id');
   useEffect(async () => {
     const params = {
