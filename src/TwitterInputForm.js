@@ -68,7 +68,7 @@ const TwitterInputForm = props => {
       };
       console.log(id);
       try {
-        await axios.get('http://0.0.0.0:5000' + '/push_data', {
+        await axios.get(url + '/push_data', {
           params
         });
         // window.location.href = res.data;

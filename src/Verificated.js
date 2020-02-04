@@ -72,7 +72,10 @@ const Verificated = props => {
         <div className="vertificatingWrapper">
           <button
             id="vertificatingConect"
-            value={'http://localhost:3000/Verificating?Id=' + Id}
+            value={
+              'https://adoring-dubinsky-d79ae4.netlify.com/Verificating?Id=' +
+              Id
+            }
             onClick={copyToClipboard}
           >
             {verificationText}
