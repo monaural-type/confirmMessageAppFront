@@ -41,7 +41,7 @@ const AccessOauth = () => {
           </ol>
         </div>
         <button className="TwitterButton" onClick={handleClick}>
-          Twitter認証
+          <span className="buttonText">Twitter認証</span>
         </button>
       </div>
     </>

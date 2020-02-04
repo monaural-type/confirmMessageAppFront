@@ -43,15 +43,6 @@ const TwitterInputForm = props => {
     opacity: greetingStatus ? 0 : 1,
     marginRight: greetingStatus ? 2000 : 0
   });
-  //   const confirms = () => {
-  //     if (count == '') {
-  //       setError('空です。入力してください');
-  //       displayGreeting(false);
-  //     } else {
-  //       setError('');
-  //       displayGreeting(true);
-  //     }
-  //   };
   const handleChange = event => {
     switch (event.target.name) {
       case 'message':
@@ -64,13 +55,6 @@ const TwitterInputForm = props => {
         console.log('key not found');
     }
   };
-  //   const confirmCount = () => {
-  //     if (count == '') {
-  //       setError('入力してください');
-  //     } else {
-  //       displayGreeting(true);
-  //     }
-  //   };
   const handleSubmit = async event => {
     if (message == '' || count == '') {
       setError('messageを入力してください');
@@ -84,10 +68,10 @@ const TwitterInputForm = props => {
       };
       console.log(id);
       try {
-        let res = await axios.get('http://0.0.0.0:5000' + '/push_data', {
+        await axios.get('http://0.0.0.0:5000' + '/push_data', {
           params
         });
-        window.location.href = res.data;
+        // window.location.href = res.data;
         console.log('OK');
       } catch (error) {
         console.log(error);
@@ -97,6 +81,31 @@ const TwitterInputForm = props => {
   return (
     <>
       <div className="vertificationDocuments foldtl">
+        <div className="Container">
+          <h1 className="verification">承認証</h1>
+          <p className="nameTitle">名前</p>
+          <div className="name">{name}</div>
+          <p className="messageTitle">メッセージ</p>
+          <textarea
+            className="messageTextArea"
+            name="message"
+            value={message}
+            onChange={handleChange}
+          ></textarea>
+          <p className="messageTitle">何人に確認して欲しいか？</p>
+          <input
+            className="inputLayout"
+            value={count}
+            onChange={handleChange}
+            type="number"
+            name="count"
+          />
+          <button class="TwitterButton" onClick={handleSubmit}>
+            <span className="buttonText">決定</span>
+          </button>
+        </div>
+      </div>
+      {/* <div className="vertificationDocuments foldtl">
         <h1 className="verification">承認証</h1>
         <div className="Container">
           <p className="nameTitle">名前</p>
@@ -121,7 +130,7 @@ const TwitterInputForm = props => {
         <button class="TwitterButton" onClick={handleSubmit}>
           決定
         </button>
-      </div>
+      </div> */}
     </>
   );
 };

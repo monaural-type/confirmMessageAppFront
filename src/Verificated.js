@@ -78,6 +78,7 @@ const Verificated = props => {
             {verificationText}
           </button>
         </div>
+
         <div className="vertificationDocuments foldtl">
           <div className="Container">
             <h1 className="verification">承認証</h1>
@@ -85,10 +86,19 @@ const Verificated = props => {
             <div className="name">{name}</div>
             <p className="messageTitle">メッセージ</p>
             <div className="messages">{message}</div>
-          </div>
-          <div className="vertificationWrapper">
             <div className="vertificationTitle">承認人数</div>
             <div className="vertificationNum">{listItems}</div>
+            {/* <div className="Container">
+            <h1 className="verification">承認証</h1>
+            <p className="nameTitle">名前</p>
+            <div className="name">{name}</div>
+            <p className="messageTitle">メッセージ</p>
+            <div className="messages">{message}</div>
+            <div className="vertificationWrapper">
+              <div className="vertificationTitle">承認人数</div>
+              <div className="vertificationNum">{listItems}</div>
+            </div>
+          </div> */}
           </div>
         </div>
       </>
