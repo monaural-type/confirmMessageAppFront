@@ -17,22 +17,22 @@ const TwitterInputForm = props => {
   const [count, setCount] = useState('');
   const [error, setError] = useState('');
   const [id, setId] = useState('');
-  useEffect(async () => {
-    const userId = getParam('Id');
-    setId(String(userId));
-    console.log(userId);
-    const params = {
-      id: userId
-    };
-    console.log(params);
-    let res;
-    try {
-      res = await axios.get(url + '/get_name', { params });
-    } catch (error) {
-      console.log(error);
-    }
-    setName(res.data.name);
-  }, [setId]);
+  // useEffect(async () => {
+  //   const userId = getParam('Id');
+  //   setId(String(userId));
+  //   console.log(userId);
+  //   const params = {
+  //     id: userId
+  //   };
+  //   console.log(params);
+  //   let res;
+  //   try {
+  //     res = await axios.get(url + '/get_name', { params });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  //   setName(res.data.name);
+  // }, [setId]);
 
   const handleChange = event => {
     switch (event.target.name) {
