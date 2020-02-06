@@ -57,22 +57,26 @@ const Verificating = props => {
     cursor: `url(${Pin}) 5 30, pointer`
   };
 
-  return (
-    <div className="vertificationDocuments foldtl" style={style}>
-      <div className="Container">
-        <h1 className="verification">承認証</h1>
-        <p className="nameTitle">名前</p>
-        <div className="name">{name}</div>
-        <p className="messageTitle">メッセージ</p>
-        <div className="messages">{message}</div>
-        <div className="BoxOfVertificationWrapper">
-          <div className="BoxOfVertification" onClick={handleClick}>
-            {flag ? <img className="approvalIcon" src={approvalIcon} /> : ''}
+  if (flag == 'false') {
+    return <div>ロード中</div>;
+  } else {
+    return (
+      <div className="vertificationDocuments foldtl" style={style}>
+        <div className="Container">
+          <h1 className="verification">承認証</h1>
+          <p className="nameTitle">名前</p>
+          <div className="name">{name}</div>
+          <p className="messageTitle">メッセージ</p>
+          <div className="messages">{message}</div>
+          <div className="BoxOfVertificationWrapper">
+            <div className="BoxOfVertification" onClick={handleClick}>
+              {flag ? <img className="approvalIcon" src={approvalIcon} /> : ''}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Verificating;
