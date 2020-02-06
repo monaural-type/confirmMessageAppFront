@@ -64,34 +64,30 @@ const Verificated = props => {
       return <div className="vertificationBox"></div>;
     }
   });
-  if (name == '') {
-    return <div>メッセージは送信されました</div>;
-  } else {
-    return (
-      <>
-        <div className="vertificatingWrapper">
-          <button
-            id="vertificatingConect"
-            value={
-              'https://adoring-dubinsky-d79ae4.netlify.com/Verificating?Id=' +
-              Id
-            }
-            onClick={copyToClipboard}
-          >
-            {verificationText}
-          </button>
-        </div>
+  return (
+    <>
+      <div className="vertificatingWrapper">
+        <button
+          id="vertificatingConect"
+          value={
+            'https://adoring-dubinsky-d79ae4.netlify.com/Verificating?Id=' + Id
+          }
+          onClick={copyToClipboard}
+        >
+          {verificationText}
+        </button>
+      </div>
 
-        <div className="vertificationDocuments foldtl">
-          <div className="Container">
-            <h1 className="verification">承認証</h1>
-            <p className="nameTitle">名前</p>
-            <div className="name">{name}</div>
-            <p className="messageTitle">メッセージ</p>
-            <div className="messages">{message}</div>
-            <div className="vertificationTitle">承認人数</div>
-            <div className="vertificationNum">{listItems}</div>
-            {/* <div className="Container">
+      <div className="vertificationDocuments foldtl">
+        <div className="Container">
+          <h1 className="verification">承認証</h1>
+          <p className="nameTitle">名前</p>
+          <div className="name">{name}</div>
+          <p className="messageTitle">メッセージ</p>
+          <div className="messages">{message}</div>
+          <div className="vertificationTitle">承認人数</div>
+          <div className="vertificationNum">{listItems}</div>
+          {/* <div className="Container">
             <h1 className="verification">承認証</h1>
             <p className="nameTitle">名前</p>
             <div className="name">{name}</div>
@@ -102,11 +98,10 @@ const Verificated = props => {
               <div className="vertificationNum">{listItems}</div>
             </div>
           </div> */}
-          </div>
         </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 };
 
 export default Verificated;

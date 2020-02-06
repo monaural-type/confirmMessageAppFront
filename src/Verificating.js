@@ -32,6 +32,9 @@ const Verificating = props => {
       setMessage(res.data.message);
       setConfirmNum(res.data.confirmNum);
       setVerificationNum(res.data.verificationNum);
+      if (res.data.confirmNum == res.data.verificationNum) {
+        setFlag(true);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -54,26 +57,22 @@ const Verificating = props => {
     cursor: `url(${Pin}) 5 30, pointer`
   };
 
-  if (name == '') {
-    return <div>存在しないページです</div>;
-  } else {
-    return (
-      <div className="vertificationDocuments foldtl" style={style}>
-        <div className="Container">
-          <h1 className="verification">承認証</h1>
-          <p className="nameTitle">名前</p>
-          <div className="name">{name}</div>
-          <p className="messageTitle">メッセージ</p>
-          <div className="messages">{message}</div>
-          <div className="BoxOfVertificationWrapper">
-            <div className="BoxOfVertification" onClick={handleClick}>
-              {flag ? <img className="approvalIcon" src={approvalIcon} /> : ''}
-            </div>
+  return (
+    <div className="vertificationDocuments foldtl" style={style}>
+      <div className="Container">
+        <h1 className="verification">承認証</h1>
+        <p className="nameTitle">名前</p>
+        <div className="name">{name}</div>
+        <p className="messageTitle">メッセージ</p>
+        <div className="messages">{message}</div>
+        <div className="BoxOfVertificationWrapper">
+          <div className="BoxOfVertification" onClick={handleClick}>
+            {flag ? <img className="approvalIcon" src={approvalIcon} /> : ''}
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 };
 
 export default Verificating;
