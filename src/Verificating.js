@@ -57,7 +57,7 @@ const Verificating = props => {
     cursor: `url(${Pin}) 5 30, pointer`
   };
 
-  if (flag == 'false') {
+  if (name == '') {
     return <div>ロード中</div>;
   } else {
     return (
