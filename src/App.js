@@ -7,7 +7,7 @@ import Verificated from './Verificated.js';
 import Verificating from './Verificating.js';
 const url = 'https://stormy-bayou-25730.herokuapp.com';
 
-//url無いの特定の要素を持ってくるためのコード(コピペ)
+//urlないの特定の要素を持ってくるためのコード(コピペ)
 const getParam = (name, url) => {
   if (!url) url = window.location.href;
   name = name.replace(/[\[\]]/g, '\\$&');

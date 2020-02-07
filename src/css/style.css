@@ -476,8 +476,8 @@ textarea {
         /* 基準の位置を画面の一番下に指定する */
         right: 0;
         /* 基準の位置を画面の一番右に指定する */
-        width: 100px;
-        height: 50px;
+        width: 130px;
+        height: 60px;
         /* 幅を指定する */
         background-color: chocolate;
         /* ボーダーを指定する */
