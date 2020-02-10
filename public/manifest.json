@@ -1,18 +1,18 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Twitter確かめったー",
+  "name": "Tweet内容を確かめます",
   "icons": [{
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "./twitter_icon_192.png",
+      "src": "twitter_icon_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./twitter_icon_512.png",
+      "src": "twitter_icon_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
